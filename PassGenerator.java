@@ -5,10 +5,10 @@ import java.util.Random;
 public class PassGenerator{
 
     public static String passGen(int size){
-        //use simbol list and ASCII codes to generate a password
+        //using a symbol list and ASCII codes to generate the password
         String specialChars     = "~`!@#$%^&*()_-+={[}]|:;\"'<,>.?/";
-        StringBuilder password =                  new StringBuilder();
-        char extra_char         =                                        0;
+        StringBuilder password  = new StringBuilder();
+        char extra_char         = 0;
     
         for(int i = 0; i < size; i++){
             int random_choice = (char)randint(0, 3);
@@ -30,7 +30,7 @@ public class PassGenerator{
         return password.toString();
     }
 
-    //pseudo randomly returns an integer
+    //returns a pseudo-random integer
     public static int randint(int min, int max){
         Random rand = new Random();
         int randNum = rand.nextInt((max - min) + 1) + min;
